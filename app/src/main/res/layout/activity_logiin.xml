@@ -8,45 +8,56 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/white"
-        android:fillViewport="true"
-        android:paddingLeft="@dimen/margin_16_dp"
-        android:paddingRight="@dimen/margin_16_dp"
-        android:scrollbars="none">
+        android:padding="@dimen/margin_16_dp"
+        android:scrollbarStyle="outsideInset"
+        android:overScrollMode="never"
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/margin_40_dp"
+            android:gravity="center"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/emailLayout"
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputLayoutEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/margin_40_dp"
-                android:orientation="vertical">
+                android:hint="@string/email"
+                android.support.design:hintAnimationEnabled="true"
+                android.support.design:hintEnabled="true">
 
-                <android.support.design.widget.TextInputLayout
-                    android:id="@+id/inputLayoutEmail"
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/inputEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/email"
-                    android.support.design:hintAnimationEnabled="true"
-                    android.support.design:hintEnabled="true">
+                    android:imeOptions="actionNext"
+                    android:textColor="@android:color/black"
+                    android:inputType="textEmailAddress" />
 
-                    <android.support.design.widget.TextInputEditText
-                        android:id="@+id/inputEmail"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:imeOptions="actionNext"
-                        android:textColor="@android:color/black"
-                        android:inputType="textEmailAddress" />
+            </android.support.design.widget.TextInputLayout>
 
-                </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputLayoutPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_30_dp"
+                android:hint="@string/password"
+                android.support.design:hintAnimationEnabled="true"
+                android.support.design:hintEnabled="true"
+                app:passwordToggleEnabled="true">
 
-            </LinearLayout>
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/inputPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLines="1" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"

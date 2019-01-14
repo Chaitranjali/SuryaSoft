@@ -1,9 +1,10 @@
 <resources>
-    <string name="app_name">SuryaSoftAssign</string>
+    <string name="app_name">Assignment</string>
     <string name="login">Login</string>
     <string name="email">Email</string>
     <string name="please_wait">Please wait..</string>
     <string name="no_internet_msg">Please check your internet</string>
     <string name="invalid_email_msg">Invalid email</string>
     <string name="error_message">Please try again</string>
+    <string name="password">password</string>
 </resources>
